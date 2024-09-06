@@ -39,6 +39,7 @@ class BaseUserManager(Generic[models.UP, models.ID]):
 
     user_db: BaseUserDatabase[models.UP, models.ID]
     password_helper: PasswordHelperProtocol
+    register_user_need_superuser_permission: bool = False
 
     def __init__(
         self,
